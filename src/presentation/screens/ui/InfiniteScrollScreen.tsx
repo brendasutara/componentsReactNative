@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { ActivityIndicator, FlatList, Image, Text, View } from 'react-native'
 import { CustomView } from '../../components/ui/CustomView'
-import { Title } from '../../components/ui/Title'
-import { colors } from '../../../config/theme/theme'
 import { FadeInImage } from '../../components/ui/FadeInImage'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const InfiniteScrollScreen = () => {
 
@@ -16,10 +15,10 @@ export const InfiniteScrollScreen = () => {
         }, 3000);
     }
 
+    const { colors } = useContext(ThemeContext)
+
     return (
-        <View style={{ backgroundColor: 'black' }}>
-
-
+        <CustomView>
             <FlatList
                 data={numbers}
                 onEndReached={loadMore}
@@ -34,7 +33,7 @@ export const InfiniteScrollScreen = () => {
                     </View>
                 )}
             />
-        </View>
+        </CustomView>
     )
 }
 

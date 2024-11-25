@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Animated, PanResponder, StyleSheet } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { CustomView } from '../../components/ui/CustomView';
 
 export const Animation102Screen = () => {
     const pan = useRef(new Animated.ValueXY()).current;
@@ -26,22 +27,21 @@ export const Animation102Screen = () => {
 
     return (
         <SafeAreaProvider>
-            <SafeAreaView style={styles.container}>
+            <CustomView margin style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}>
                 <Animated.View
                     {...panResponder.panHandlers}
                     style={[pan.getLayout(), styles.box]}
                 />
-            </SafeAreaView>
+            </CustomView>
         </SafeAreaProvider>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     box: {
         backgroundColor: '#61dafb',
         width: 80,

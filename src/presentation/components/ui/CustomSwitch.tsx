@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Platform, StyleSheet, Switch, Text, View } from 'react-native'
-import { colors } from '../../../config/theme/theme';
+import { ThemeContext } from '../../context/ThemeContext';
 
 interface Props {
     isOn: boolean;
@@ -10,6 +10,8 @@ interface Props {
 }
 
 export const CustomSwitch = ({ isOn, text, onChange }: Props) => {
+
+    const { colors } = useContext(ThemeContext)
 
     return (
         <View style={styles.switchRow}>
@@ -31,6 +33,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginVertical: 5,
+        marginVertical: 5
     }
 })

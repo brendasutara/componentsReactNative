@@ -2,11 +2,14 @@ import { KeyboardAvoidingView, Platform, Text, TextInput, View } from 'react-nat
 import { CustomView } from '../../components/ui/CustomView'
 import { Title } from '../../components/ui/Title'
 import { Card } from '../../components/ui/Card'
-import { globalStyles } from '../../../config/theme/theme'
-import { useState } from 'react'
+import { colors, globalStyles } from '../../../config/theme/theme';
+import { useContext, useState } from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const TextInputScreen = () => {
+
+    const { colors } = useContext(ThemeContext)
 
     const [form, setForm] = useState({
         name: '',
@@ -22,7 +25,11 @@ export const TextInputScreen = () => {
                     <Title safe text='Text Inputs' />
                     <Card>
                         <TextInput
-                            style={globalStyles.input}
+                            style={{
+                                ...globalStyles.input,
+                                color: colors.text,
+                                borderColor: colors.text,
+                            }}
                             placeholder='Nombre completo'
                             autoCapitalize={'words'}
                             autoCorrect={false}
@@ -30,7 +37,11 @@ export const TextInputScreen = () => {
                         />
 
                         <TextInput
-                            style={globalStyles.input}
+                            style={{
+                                ...globalStyles.input,
+                                color: colors.text,
+                                borderColor: colors.text,
+                            }}
                             placeholder='Correo electrónico'
                             autoCapitalize={'none'}
                             autoCorrect={false}
@@ -39,7 +50,11 @@ export const TextInputScreen = () => {
                         />
 
                         <TextInput
-                            style={globalStyles.input}
+                            style={{
+                                ...globalStyles.input,
+                                color: colors.text,
+                                borderColor: colors.text,
+                            }}
                             placeholder='Teléfono'
                             autoCapitalize={'none'}
                             autoCorrect={false}
@@ -51,27 +66,31 @@ export const TextInputScreen = () => {
                     <View style={{ height: 20 }} />
 
                     <Card>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
-                        <Text>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
+                        <Text style={{ color: colors.text }}>{JSON.stringify(form, null, 2)}</Text>
                     </Card>
 
                     <View style={{ height: 20 }} />
 
                     <Card>
                         <TextInput
-                            style={globalStyles.input}
+                            style={{
+                                ...globalStyles.input,
+                                color: colors.text,
+                                borderColor: colors.text,
+                            }}
                             placeholder='Nombre completo'
                             autoCapitalize={'words'}
                             autoCorrect={false}

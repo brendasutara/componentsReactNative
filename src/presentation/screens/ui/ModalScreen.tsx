@@ -2,10 +2,12 @@ import { Modal, Platform, Text, View } from 'react-native'
 import { Title } from '../../components/ui/Title'
 import { CustomView } from '../../components/ui/CustomView'
 import { Button } from '../../components/ui/Button'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const ModalScreen = () => {
     const [isVisible, setIsVisible] = useState(false)
+    const { colors } = useContext(ThemeContext)
     return (
         <CustomView margin>
             <Title text='Modal' safe />
@@ -20,7 +22,7 @@ export const ModalScreen = () => {
                 animationType='slide'>
                 <View style={{
                     flex: 1,
-                    backgroundColor: 'rgba(0,0,0,0.1)'
+                    backgroundColor: colors.cardBackground
                 }}>
                     <View style={{ paddingHorizontal: 10 }}>
                         <Title text='Modal content' safe />

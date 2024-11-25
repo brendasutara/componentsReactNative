@@ -17,16 +17,34 @@ export const colors: ThemeColors = {
     buttonTextColor: "white",
 };
 
+export const lightColors: ThemeColors = {
+    primary: "#5856D6",
+    text: "black",
+
+    background: "#F3F2F7",
+    cardBackground: "white",
+    buttonTextColor: "white",
+};
+
+export const darkColors: ThemeColors = {
+    primary: "#888de5",
+    text: "rgba(255,255,255,0.8)",
+
+    background: "#121212",
+    cardBackground: "#2d2d2d",
+    buttonTextColor: "white",
+};
+
 export const globalStyles = StyleSheet.create({
     title: {
         fontSize: 30,
         fontWeight: "bold",
-        color: colors.text,
+        // color: colors.text,
     },
     subTitle: {
         fontSize: 20,
         fontWeight: "bold",
-        color: colors.text,
+        // color: colors.text,
     },
 
     input: {
@@ -36,12 +54,12 @@ export const globalStyles = StyleSheet.create({
         padding: 10,
         borderColor: 'rgba(0,0,0,0.3)',
         borderRadius: 10,
-        color: colors.text
+        // color: colors.text
     },
 
     mainContainer: {
         flex: 1,
-        backgroundColor: colors.background,
+        // backgroundColor: colors.background,
     },
     globalMargin: {
         paddingHorizontal: 20,
