@@ -38,8 +38,6 @@ export const Animation101Screen = () => {
                     startMovingTopPosition({ initialPosition: -100, easing: Easing.elastic(2), duration: 750 })
                 }} />
 
-
-
             <Button
                 text='FadeOut'
                 onPress={() => fadeOut({})}

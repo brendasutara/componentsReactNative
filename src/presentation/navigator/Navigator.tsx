@@ -15,9 +15,10 @@ import { ChangeThemeScreen } from '../screens/theme/ChangeThemeScreen';
 const Stack = createStackNavigator();
 
 export const Navigator = () => {
+
     return (
         <Stack.Navigator screenOptions={{
-            headerShown: false
+            headerShown: false,
         }}>
             <Stack.Screen name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="Animation101Screen" component={Animation101Screen} />

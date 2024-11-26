@@ -27,6 +27,7 @@ export const PullToRefreshScreen = () => {
                     refreshing={isRereshing}
                     progressViewOffset={top}
                     colors={[colors.primary, 'red', 'orange', 'green']}
+                    progressBackgroundColor={colors.cardBackground}
                     onRefresh={onRefresh}
                 />
             }>
