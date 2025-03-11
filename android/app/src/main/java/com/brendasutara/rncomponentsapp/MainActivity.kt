@@ -1,4 +1,4 @@
-package com.componentsapp
+package com.brendasutara.rncomponentsapp
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
